@@ -1,5 +1,5 @@
 // =============================
-// Vulsshield - User Status Manager
+// Kuntron - User Status Manager
 // =============================
 // Ce module gère le statut de progression de l'utilisateur dans le flux d'onboarding
 
