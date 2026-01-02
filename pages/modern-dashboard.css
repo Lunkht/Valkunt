@@ -1,0 +1,416 @@
+/* ===== DESIGN MODERNE UNIFORME POUR LES DASHBOARDS ===== */
+
+/* Variables CSS étendues pour le design moderne */
+:root {
+    /* Couleurs principales */
+    --modern-primary: #6366f1;
+    --modern-primary-hover: #5b5bf6;
+    --modern-secondary: #8b5cf6;
+    --modern-accent: #06b6d4;
+    
+    /* Couleurs de fond */
+    --modern-bg-primary: #0f0f23;
+    --modern-bg-secondary: #1a1a2e;
+    --modern-bg-tertiary: #16213e;
+    --modern-bg-card: #1e1e3f;
+    
+    /* Couleurs de texte */
+    --modern-text-primary: #f8fafc;
+    --modern-text-secondary: #cbd5e1;
+    --modern-text-muted: #64748b;
+    
+    /* Couleurs d'état */
+    --modern-success: #10b981;
+    --modern-warning: #f59e0b;
+    --modern-error: #ef4444;
+    --modern-info: #3b82f6;
+    
+    /* Bordures et ombres */
+    --modern-border: #334155;
+    --modern-border-light: #475569;
+    --modern-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --modern-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --modern-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --modern-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    
+    /* Rayons de bordure */
+    --modern-radius-sm: 0.375rem;
+    --modern-radius-md: 0.5rem;
+    --modern-radius-lg: 0.75rem;
+    --modern-radius-xl: 1rem;
+    
+    /* Transitions */
+    --modern-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --modern-transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Amélioration du body */
+body {
+    background: linear-gradient(135deg, var(--modern-bg-primary) 0%, var(--modern-bg-secondary) 100%);
+    color: var(--modern-text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Amélioration de la top-bar */
+.top-bar {
+    background: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--modern-border);
+    box-shadow: var(--modern-shadow-sm);
+}
+
+.top-bar .container {
+    max-width: 1400px;
+}
+
+/* Amélioration de la sidebar */
+.admin-sidebar {
+    background: linear-gradient(180deg, var(--modern-bg-card) 0%, var(--modern-bg-tertiary) 100%);
+    border-right: 1px solid var(--modern-border);
+    box-shadow: var(--modern-shadow-lg);
+}
+
+.sidebar-header {
+    background: rgba(99, 102, 241, 0.1);
+    border-bottom: 1px solid var(--modern-border-light);
+}
+
+.sidebar-toggle {
+    background: var(--modern-bg-tertiary);
+    border: 1px solid var(--modern-border);
+    border-radius: var(--modern-radius-md);
+    color: var(--modern-text-secondary);
+    transition: var(--modern-transition);
+}
+
+.sidebar-toggle:hover {
+    background: var(--modern-primary);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: var(--modern-shadow-md);
+}
+
+/* Navigation améliorée */
+.nav-title {
+    color: var(--modern-text-muted);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nav-item {
+    border-radius: var(--modern-radius-md);
+    margin: 0 12px 4px;
+    transition: var(--modern-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+}
+
+.nav-item:hover::before {
+    left: 100%;
+}
+
+.nav-item:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--modern-text-primary);
+    transform: translateX(4px);
+}
+
+.nav-item.active {
+    background: linear-gradient(135deg, var(--modern-primary) 0%, var(--modern-secondary) 100%);
+    color: white;
+    box-shadow: var(--modern-shadow-md);
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 20px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Badges modernisés */
+.nav-badge {
+    background: linear-gradient(135deg, var(--modern-accent) 0%, var(--modern-primary) 100%);
+    border-radius: var(--modern-radius-xl);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    box-shadow: var(--modern-shadow-sm);
+}
+
+.nav-badge.danger {
+    background: linear-gradient(135deg, var(--modern-error) 0%, #dc2626 100%);
+}
+
+.nav-badge.warning {
+    background: linear-gradient(135deg, var(--modern-warning) 0%, #d97706 100%);
+}
+
+.nav-badge.success {
+    background: linear-gradient(135deg, var(--modern-success) 0%, #059669 100%);
+}
+
+/* Contenu principal amélioré */
+.admin-main {
+    background: transparent;
+    padding: 2rem;
+}
+
+/* Cartes de statistiques modernisées */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--modern-bg-card) 0%, var(--modern-bg-tertiary) 100%);
+    border: 1px solid var(--modern-border);
+    border-radius: var(--modern-radius-lg);
+    padding: 1.5rem;
+    transition: var(--modern-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--modern-primary), var(--modern-accent));
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--modern-shadow-xl);
+    border-color: var(--modern-border-light);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--modern-radius-lg);
+    background: linear-gradient(135deg, var(--modern-primary) 0%, var(--modern-secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: var(--modern-shadow-md);
+}
+
+.stat-icon i {
+    color: white;
+    font-size: 1.25rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--modern-text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    color: var(--modern-text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Widgets modernisés */
+.admin-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.widget {
+    background: linear-gradient(135deg, var(--modern-bg-card) 0%, var(--modern-bg-tertiary) 100%);
+    border: 1px solid var(--modern-border);
+    border-radius: var(--modern-radius-lg);
+    overflow: hidden;
+    transition: var(--modern-transition);
+}
+
+.widget:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--modern-shadow-lg);
+}
+
+.widget-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--modern-border);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.widget-header h4 {
+    color: var(--modern-text-primary);
+    font-weight: 600;
+    margin: 0;
+}
+
+.widget-content {
+    padding: 1.5rem;
+}
+
+/* Boutons modernisés */
+.btn-primary {
+    background: linear-gradient(135deg, var(--modern-primary) 0%, var(--modern-secondary) 100%);
+    border: none;
+    border-radius: var(--modern-radius-md);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: var(--modern-transition);
+    box-shadow: var(--modern-shadow-sm);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--modern-shadow-md);
+}
+
+.btn-secondary {
+    background: var(--modern-bg-tertiary);
+    border: 1px solid var(--modern-border);
+    border-radius: var(--modern-radius-md);
+    color: var(--modern-text-secondary);
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    transition: var(--modern-transition);
+}
+
+.btn-secondary:hover {
+    background: var(--modern-bg-card);
+    color: var(--modern-text-primary);
+    border-color: var(--modern-border-light);
+}
+
+/* Formulaires modernisés */
+.form-input, .form-select, .form-textarea {
+    background: var(--modern-bg-tertiary);
+    border: 1px solid var(--modern-border);
+    border-radius: var(--modern-radius-md);
+    color: var(--modern-text-primary);
+    padding: 0.75rem 1rem;
+    transition: var(--modern-transition);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--modern-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    outline: none;
+}
+
+/* Animations d'entrée */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.stat-card {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.widget {
+    animation: fadeInScale 0.6s ease-out;
+}
+
+/* Responsive amélioré */
+@media (max-width: 768px) {
+    .admin-main {
+        padding: 1rem;
+    }
+    
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .admin-widgets {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stat-card, .widget {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Effet de shimmer pour les éléments en chargement */
+.shimmer-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+    transition: left 0.8s;
+}
+
+.shimmer-hover:hover::after {
+    left: 100%;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--modern-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--modern-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--modern-border-light);
+}

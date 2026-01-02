@@ -1780,50 +1780,6 @@ main {
     margin: 8px;
 }
 
-/* Partners Section */
-.partners-carousel {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    margin-top: 40px;
-}
-#partners h2{
-font-size: 1.5rem;
-}
-
-.partners-track {
-    display: flex;
-    width: calc(120px * 12);
-    /* 200px per logo * 12 logos */
-    animation: scroll 15s linear infinite;
-}
-
-.partner-logo {
-    width: 120px;
-    text-align: center;
-}
-
-.partner-logo i {
-    font-size: 3rem;
-    color: #797878;
-    transition: color 0.3s;
-}
-
-.partner-logo i:hover {
-    color: var(--primary-white);
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(calc(-200px * 6));
-        /* Scroll by half the width */
-    }
-}
-
 /* Newsletter Section */
 .newsletter-section {
     width: 100%;
