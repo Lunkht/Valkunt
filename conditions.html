@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conditions d'utilisation - Kuntron</title>
+    <title>Conditions d'utilisation - Valkunt</title>
     <link rel="icon" type="image/x-icon" href="./pages/img/favicon.ico">
     
     <!-- Bootstrap CSS -->
@@ -134,10 +134,10 @@
                 <!-- Conditions Content -->
                 <div class="conditions-content">
                     <h4>1. Acceptation des conditions</h4>
-                    <p>En utilisant les services de Kuntron, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services.</p>
+                    <p>En utilisant les services de Valkunt, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services.</p>
                     
                     <h4>2. Description du service</h4>
-                    <p>Kuntron fournit une plateforme de sécurité informatique permettant de surveiller, détecter et protéger contre les menaces cybernétiques. Nos services incluent la surveillance en temps réel, l'analyse des vulnérabilités et les alertes de sécurité.</p>
+                    <p>Valkunt fournit une plateforme de sécurité informatique permettant de surveiller, détecter et protéger contre les menaces cybernétiques. Nos services incluent la surveillance en temps réel, l'analyse des vulnérabilités et les alertes de sécurité.</p>
                     
                     <h4>3. Compte utilisateur</h4>
                     <p>Vous êtes responsable de maintenir la confidentialité de votre compte et de votre mot de passe. Vous acceptez de nous notifier immédiatement de toute utilisation non autorisée de votre compte.</p>
@@ -155,10 +155,10 @@
                     <p>Nous nous engageons à protéger vos données conformément à notre politique de confidentialité et au RGPD. Vos données seront utilisées uniquement pour fournir nos services et améliorer votre expérience.</p>
                     
                     <h4>6. Limitation de responsabilité</h4>
-                    <p>Kuntron ne pourra être tenu responsable des dommages indirects, consécutifs ou punitifs résultant de l'utilisation de nos services. Notre responsabilité totale ne dépassera pas le montant payé pour nos services.</p>
+                    <p>Valkunt ne pourra être tenu responsable des dommages indirects, consécutifs ou punitifs résultant de l'utilisation de nos services. Notre responsabilité totale ne dépassera pas le montant payé pour nos services.</p>
                     
                     <h4>7. Propriété intellectuelle</h4>
-                    <p>Tous les droits de propriété intellectuelle relatifs à nos services appartiennent à Kuntron. Vous ne pouvez pas copier, modifier ou distribuer notre contenu sans autorisation préalable.</p>
+                    <p>Tous les droits de propriété intellectuelle relatifs à nos services appartiennent à Valkunt. Vous ne pouvez pas copier, modifier ou distribuer notre contenu sans autorisation préalable.</p>
                     
                     <h4>8. Résiliation</h4>
                     <p>Nous nous réservons le droit de suspendre ou de résilier votre accès à nos services en cas de violation de ces conditions d'utilisation.</p>
@@ -176,7 +176,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="acceptTerms" style="transform: scale(1.2);">
                             <label class="form-check-label text-white ms-2" for="acceptTerms">
-                                J'ai lu et j'accepte les conditions d'utilisation de Kuntron
+                                J'ai lu et j'accepte les conditions d'utilisation de Valkunt
                             </label>
                         </div>
                     </div>
@@ -196,9 +196,9 @@
 
         const firebaseConfig = {
             apiKey: "AIzaSyC9w4qJWJPZ0vDp4-wgnX2lHsqiGC1ARD8",
-            authDomain: "kuntron-1ac44.firebaseapp.com",
-            projectId: "kuntron-1ac44",
-            storageBucket: "kuntron-1ac44.appspot.com",
+            authDomain: "valkunt-1ac44.firebaseapp.com",
+            projectId: "valkunt-1ac44",
+            storageBucket: "valkunt-1ac44.appspot.com",
             messagingSenderId: "914751126433",
             appId: "1:914751126433:web:2d0b34e3f0a1c3f8e6db8e"
         };
@@ -293,7 +293,7 @@
                         setTermsAccepted();
                     }
                     // Rediriger vers l'étape de paiement / informations
-                    const nextUrl = 'pages/checkout.html' + (selectedPlan ? ('?plan=' + encodeURIComponent(selectedPlan)) : '');
+                    const nextUrl = 'pages/checkout.html' + (selectedPlan ? ('?plan=' + encodeURIComponent(selectedplan)) : '');
                     console.log('Conditions acceptées, redirection vers la page de paiement/essai');
                     window.location.href = nextUrl;
                 } catch (error) {
