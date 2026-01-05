@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion - Kuntron</title>
+    <title>Connexion - Valkunt</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,31 +13,41 @@
             display: flex;
             min-height: 100vh;
             background: radial-gradient(1200px 600px at -10% -20%, rgba(74, 158, 255, 0.15), transparent 60%),
-                        radial-gradient(800px 400px at 110% 0%, rgba(3, 48, 46, 0.25), transparent 50%),
-                        #0b0b0b;
+                radial-gradient(800px 400px at 110% 0%, rgba(3, 48, 46, 0.25), transparent 50%),
+                #0b0b0b;
         }
+
         .auth-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('assets/images/kuntron-watch.png') center/cover no-repeat;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/images/Valkunt-watch.png') center/cover no-repeat;
             color: #fff;
             padding: 48px 24px;
             position: relative;
             overflow: hidden;
         }
+
         .auth-side::after {
             content: "";
             position: absolute;
             inset: 0;
             background: radial-gradient(500px 300px at 30% 20%, rgba(237, 5, 5, 0.2), transparent 60%),
-                        radial-gradient(500px 300px at 70% 80%, rgba(74, 158, 255, 0.18), transparent 60%);
+                radial-gradient(500px 300px at 70% 80%, rgba(74, 158, 255, 0.18), transparent 60%);
             pointer-events: none;
         }
-        .auth-side .logo { margin-bottom: 28px; }
-        .auth-side .logo img { width: 120px; filter: drop-shadow(0 6px 24px rgba(0,0,0,0.4)); }
+
+        .auth-side .logo {
+            margin-bottom: 28px;
+        }
+
+        .auth-side .logo img {
+            width: 120px;
+            filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.4));
+        }
+
         .auth-side h1 {
             font-size: 2.4rem;
             margin-bottom: 14px;
@@ -44,12 +55,14 @@
             letter-spacing: 0.3px;
             text-align: center;
         }
+
         .auth-side p {
             font-size: 1.05rem;
             color: #cfcfcf;
             max-width: 420px;
             text-align: center;
         }
+
         .auth-form-side {
             flex: 1;
             display: flex;
@@ -57,18 +70,20 @@
             justify-content: center;
             padding: 40px 20px;
         }
+
         .auth-form-container {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 16px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
             padding: 36px 30px;
             min-width: 340px;
             max-width: 420px;
             width: 100%;
         }
+
         .auth-form-container h2 {
             color: #fff;
             margin-bottom: 22px;
@@ -76,16 +91,46 @@
             font-size: 1.6rem;
             font-weight: 700;
         }
+
         .auth-form-container .btn-primary,
-        .auth-form-container .btn-secondary { width: 100%; }
-        .auth-form-container .btn-primary { margin-top: 8px; margin-bottom: 10px; box-shadow: 0 8px 20px rgba(74,158,255,0.25); }
-        .auth-form-container .btn-primary:hover { box-shadow: 0 10px 28px rgba(74,158,255,0.35); transform: translateY(-1px); }
-        .auth-form-container .btn-secondary { margin-bottom: 10px; }
-        .auth-form-container p { text-align: center; margin-top: 14px; color: #c9c9c9; }
+        .auth-form-container .btn-secondary {
+            width: 100%;
+        }
+
+        .auth-form-container .btn-primary {
+            margin-top: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 8px 20px rgba(74, 158, 255, 0.25);
+        }
+
+        .auth-form-container .btn-primary:hover {
+            box-shadow: 0 10px 28px rgba(74, 158, 255, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .auth-form-container .btn-secondary {
+            margin-bottom: 10px;
+        }
+
+        .auth-form-container p {
+            text-align: center;
+            margin-top: 14px;
+            color: #c9c9c9;
+        }
 
         /* Inputs */
-        .form-group { position: relative; margin-bottom: 16px; }
-        .form-group label { display: block; margin-bottom: 8px; color: #e5e5e5; font-size: 0.95rem; }
+        .form-group {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e5e5e5;
+            font-size: 0.95rem;
+        }
+
         .form-group input {
             width: 100%;
             padding: 12px 42px 12px 12px;
@@ -96,10 +141,12 @@
             outline: none;
             transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
+
         .form-group input:focus {
             border-color: #4a9eff;
-            box-shadow: 0 0 0 4px rgba(74,158,255,0.12);
+            box-shadow: 0 0 0 4px rgba(74, 158, 255, 0.12);
         }
+
         .toggle-password {
             position: absolute;
             right: 12px;
@@ -110,26 +157,55 @@
             cursor: pointer;
             font-size: 0.95rem;
         }
-        .form-extra { display: flex; justify-content: space-between; align-items: center; margin: 4px 0 10px; }
-        .form-extra a { color: #9fd3ff; text-decoration: none; font-size: 0.9rem; }
-        .form-extra a:hover { text-decoration: underline; }
 
-        .error-message { color: #ff6b6b; font-size: 0.9rem; margin-bottom: 6px; }
+        .form-extra {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 4px 0 10px;
+        }
+
+        .form-extra a {
+            color: #9fd3ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .form-extra a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
 
         @media (max-width: 900px) {
-            .auth-flex { flex-direction: column; }
-            .auth-side, .auth-form-side { min-height: 280px; }
-            .auth-form-container { min-width: 0; width: 92%; }
+            .auth-flex {
+                flex-direction: column;
+            }
+
+            .auth-side,
+            .auth-form-side {
+                min-height: 280px;
+            }
+
+            .auth-form-container {
+                min-width: 0;
+                width: 92%;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="auth-flex">
         <div class="auth-side">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.svg" alt="Kuntron Logo">
+                <img src="assets/images/logo.svg" alt="Valkunt Logo">
             </a>
-            <h1>Bienvenue sur Kuntron</h1>
+            <h1>Bienvenue sur Valkunt</h1>
             <p>Connectez-vous à votre coffre-fort numérique et gérez vos mots de passe en toute sécurité.</p>
         </div>
         <div class="auth-form-side">
@@ -141,7 +217,9 @@
                     </div>
                     <div class="form-group">
                         <input type="password" id="password" name="password" required placeholder="Mot de passe">
-                        <button type="button" class="toggle-password" aria-label="Afficher/Masquer le mot de passe" onclick="(function(){const i=document.getElementById('password'); i.type = i.type==='password' ? 'text' : 'password';})()"><i class="far fa-eye"></i></button>
+                        <button type="button" class="toggle-password" aria-label="Afficher/Masquer le mot de passe"
+                            onclick="(function(){const i=document.getElementById('password'); i.type = i.type==='password' ? 'text' : 'password';})()"><i
+                                class="far fa-eye"></i></button>
                     </div>
                     <div class="form-extra">
                         <span></span>
@@ -149,7 +227,8 @@
                     </div>
                     <div id="login-error" class="error-message" style="display: none;"></div>
                     <button type="submit" class="btn-primary">Se connecter</button>
-                    <button type="button" class="btn-secondary" onclick="window.location.href = 'pages/dashboard.html';">Retour</button>
+                    <button type="button" class="btn-secondary"
+                        onclick="window.location.href = 'pages/dashboard.html';">Retour</button>
                     <p>Pas encore de compte ? <a href="inscription.html">Créer un compte</a></p>
                 </form>
             </div>
@@ -164,9 +243,9 @@
         // Your web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyC96G3sw6K9gSjWfhjstIyeOr4Wvsd9cN8",
-            authDomain: "kuntron-9f0ec.firebaseapp.com",
-            projectId: "kuntron-9f0ec",
-            storageBucket: "kuntron-9f0ec.firebasestorage.app",
+            authDomain: "valkunt-9f0ec.firebaseapp.com",
+            projectId: "valkunt-9f0ec",
+            storageBucket: "valkunt-9f0ec.firebasestorage.app",
             messagingSenderId: "746089630426",
             appId: "1:746089630426:web:532d935628d5e988cf73e3",
             measurementId: "G-HGJG72PGY2"
@@ -203,4 +282,5 @@
         });
     </script>
 </body>
+
 </html>
