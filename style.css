@@ -635,6 +635,7 @@ body {
     display: block;
     color: var(--primary-green);
     font-size: 24px;
+    color: white;
     font-weight: bold;
     margin-bottom: 4px;
 }
@@ -1396,6 +1397,13 @@ body {
     color: var(--primary-green);
 }
 
+.stat-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
 .icon-option.selected {
     border-color: var(--primary-green);
     background-color: var(--primary-green);
@@ -1675,7 +1683,7 @@ main {
 
 .solution-card i {
     font-size: 3rem;
-    color: var(--primary-green);
+    color: white;
     margin-bottom: 15px;
 }
 
@@ -1725,7 +1733,7 @@ main {
 
 .whyus-card i {
     font-size: 3rem;
-    color: var(--primary-green);
+    color: white;
     margin-bottom: 15px;
 }
 
